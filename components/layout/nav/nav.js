@@ -1,15 +1,12 @@
 import classes from "./nav.module.css";
-import { useSpring, animated } from "react-spring";
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Nav({ visible }) {
-  const animation = useSpring({
-    from: { opacity: 0.001, transform: "translate3d(0,-50px,0)" },
-    to: { opacity: 1, transform: "translate3d(0,0px,0)" },
-  });
+  
   return (
-    <animated.nav style={animation} className={classes.Nav}>
+    <nav  className={classes.Nav}>
       <Image
         title="Karbel Çelik"
         id="logo"
@@ -116,6 +113,6 @@ export default function Nav({ visible }) {
           <i className={"fab fa-linkedin fa-lg " + classes.icon}></i>{" "}
         </a>
       </div>
-    </animated.nav>
+    </nav>
   );
 }
