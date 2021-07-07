@@ -1,21 +1,51 @@
 import classes from "./nav.module.css";
-
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Nav({ visible }) {
-  
+  const [logoStyle, setLogoStyle] = useState({});
+  const [style, setStyle] = useState({});
+  useEffect(() => {
+    if (!visible) {
+      setStyle({
+        padding: "0",
+        fontSize: "20px",
+        height: "100px",
+        transition: "0.4s"
+      });
+      setLogoStyle({
+        transform: "scale(0.6)",
+        transition: "0.4s",
+      });
+    } else {
+      setStyle({
+        padding: "10px 5px",
+        fontSize: "24px",
+        transition: "0.4s"
+      });
+      setLogoStyle({
+        transform: "scale(1)",
+        transition: "0.4s",
+      });
+    }
+  }, [visible]);
+
   return (
-    <nav  className={classes.Nav}>
-      <Image
-        title="Karbel Çelik"
-        id="logo"
-        src={"/images/Logo.png"}
-        width={300}
-        height={200}
-        alt="logo"
-        className={classes.logo}
-      />
+    <nav style={style} className={classes.Nav}>
+      <Link href="/">
+        <a style={logoStyle}>
+          <Image
+            title="Karbel Çelik"
+            id="logo"
+            src={"/images/Logo.png"}
+            width={300}
+            height={200}
+            alt="logo"
+            className={classes.logo}
+          />
+        </a>
+      </Link>
       <ul className={classes.links_container}>
         <li>
           <Link href="/">
@@ -25,19 +55,7 @@ export default function Nav({ visible }) {
               id="hakkımızda_linki_nav"
               href="#Hakkımızda"
             >
-              Hakkımızda
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/neden-karbel">
-            <a
-              className={classes.link}
-              title="Neden Karbel Linki"
-              id="neden_karbel_linki_nav"
-              href="#Neden Karbel?"
-            >
-              Neden Karbel?
+              Anasayfa
             </a>
           </Link>
         </li>
@@ -61,19 +79,7 @@ export default function Nav({ visible }) {
               id="referanslarımız_linki_nav"
               href="#Referanslarımız"
             >
-              Referanslarımız
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/tedarikcilerimiz">
-            <a
-              className={classes.link}
-              title="Tedarikçilerimiz Linki"
-              id="tedarikçilerimiz_linki_nav"
-              href="#Tedarikçilerimiz"
-            >
-              Tedarikçilerimiz{" "}
+              Referanslarımız ve Tedarikçilerimiz
             </a>
           </Link>
         </li>

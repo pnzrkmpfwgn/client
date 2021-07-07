@@ -1,4 +1,4 @@
-import {useEffect,useState,useRef} from 'react';
+import {useEffect,useState,useRef,useCallback} from 'react';
 
 export const useOnClickOutside = (ref, handler) => {
   useEffect(() => {
@@ -54,3 +54,38 @@ export const useOnScreen=(options)=> {
   return [ref, visible];
 }
 
+export const useDimensions = ref => {
+  const dimensions = useRef({ width: 0, height: 0 });
+
+  useEffect(() => {
+    dimensions.current.width = ref.current.offsetWidth;
+    dimensions.current.height = ref.current.offsetHeight;
+  }, []);
+
+  return dimensions.current;
+};
+
+export const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback(e =>{
+      if(e.matches){
+          setTargetReached(true);
+      }else{
+          setTargetReached(false);
+      }
+  },[]);
+
+  useEffect(()=>{
+      const media = window.matchMedia(`(max-width:${width}px)`);
+      media.addEventListener('change',e => updateTarget(e))
+      //Check on mount (callback is not called until a change occurs)
+      if(media.matches){
+          setTargetReached(true)
+      }
+
+      return () => media.removeEventListener('change',e => updateTarget(e))
+  },[])
+
+  return targetReached;
+}

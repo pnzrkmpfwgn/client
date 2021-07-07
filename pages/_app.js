@@ -2,7 +2,7 @@ import App from "next/app";
 import Head from "next/head";
 import Layout from "../components/layout/layout";
 import "../styles/globals.css";
-
+import '../styles/styles.css';
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;

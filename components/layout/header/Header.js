@@ -1,21 +1,21 @@
 import { useState, useEffect, useRef } from "react";
-
+import Image from "next/image";
 //utils
-import { useOnClickOutside } from "../../../utils/hooks";
+import { useOnClickOutside, useMediaQuery } from "../../../utils/hooks";
 
 //components
 import Nav from "../nav/nav";
+import Menu from "../menu/Menu";
+import classes from "../menu/menu.module.css";
 
-import Image from "next/image";
-
-export default function Header({visible}) {
+export default function Header({ visible }) {
   //Ref
-  const node =useRef();
+  const node = useRef();
 
   //state
   const [open, setOpen] = useState(false);
   const [size, setSize] = useState();
-
+  const width = useMediaQuery(768);
   //Handlers
   useOnClickOutside(node, setOpen);
   //Effects
@@ -39,7 +39,13 @@ export default function Header({visible}) {
 
   return (
     <header ref={node} title="Başlık" id="başlık">
-     <Nav visible={visible} />
+      {width ? (
+        <div >
+          <Menu /> <div className={classes.logo} ><Image src={"/images/Logo.png"} width={300} height={200} /> </div>{" "}
+        </div>
+      ) : (
+        <Nav visible={visible} />
+      )}
     </header>
   );
 }
