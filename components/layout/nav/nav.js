@@ -33,7 +33,7 @@ export default function Nav({ visible }) {
 
   return (
     <nav style={style} className={classes.Nav}>
-      <Link href="/">
+      <Link href="/anasayfa">
         <a style={logoStyle}>
           <Image
             title="Karbel Çelik"
@@ -48,7 +48,7 @@ export default function Nav({ visible }) {
       </Link>
       <ul className={classes.links_container}>
         <li>
-          <Link href="/">
+          <Link href="/anasayfa">
             <a
               className={classes.link}
               title="Hakkımızda Linki"

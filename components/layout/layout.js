@@ -21,7 +21,6 @@ export default function Layout({ children }) {
   //     window.removeEventListener("resize", onResize);
   //   };
   // }, []);
-  console.log(size);
   return (
     <>
       {size ? null : <div ref={ref} className={classes.content} ></div>}

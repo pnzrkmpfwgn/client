@@ -32,12 +32,13 @@
     transform-origin: top center;
   }
   
-  .container {
-    background: #0055ff;
+  .accordion_container {
+    background: #000;
     border-radius: 10px;
+    width: 90%;
     color: white;
     cursor: pointer;
-    height: 40px;
+    height: 70px;
     margin-bottom: 20px;
   }
   
@@ -59,7 +60,85 @@
   .section {
     overflow: hidden;
   }
+
+  .heading {
+    color: rgb(30, 34, 83);
+    font-size: 38px;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+  }
+
+  .icon_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
   
+  .icon {
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(30, 34, 83);
+  }
+
+  .info {
+    color: rgb(66, 75, 80);
+    width: 80%;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  
+.service_title{
+  text-align: center;
+  font-size:24px;
+  font-weight: bold;
+}
+
+.container{
+  width: 100vw;
+  height: 40vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next,
+  .prev {
+    position: absolute;
+    background: white;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+  }
+  
+  .next {
+    right: 300px;
+  }
+  
+  .prev {
+    left: 300px;
+    transform: scale(-1);
+  }
+  
+  .img {
+    position: absolute;
+    width: 20%;
+    max-width: 100vw;
+  }
+
   @media (max-width: 600px) {
     .content_placeholder {
       padding-left: 20px;
