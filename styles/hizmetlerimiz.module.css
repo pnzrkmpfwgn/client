@@ -39,6 +39,7 @@
     color: white;
     cursor: pointer;
     height: 70px;
+    min-height: 150px;
     margin-bottom: 20px;
   }
   

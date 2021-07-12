@@ -19,12 +19,12 @@ const variants = {
 
 const colors = ['#FF008C', '#D309E1', '#9C1AFF', '#7700FF', "#4400FF"];
 
-const MenuItem = ({ i }) => {
+const MenuItem = ({ i,isOpen }) => {
     const style = { border: `2px solid ${colors[i]}` };
 
     return (
-        <motion.li className={classes.list_item} variants={variants} whileHover={{scale:1.1}} whileTap={{scale:0.95}} >
-            <div className={classes.icon} style={style} />
+        <motion.li className={isOpen ? classes.list_item + " " + classes.list_item_open : classes.list_item} variants={variants} whileHover={{scale:1.1}} whileTap={{scale:0.95}} >
+            <div className={classes.icon } style={style} />
             <div className={classes.text} style={style} />
         </motion.li>
     )

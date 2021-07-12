@@ -13,10 +13,10 @@ const variants = {
 
 const itemsID = [0, 1, 2, 3, 4];
 
-const Navigation = () => (
-    <motion.ul className={classes.unOrderedList} variants={variants} >
+const Navigation = ({isOpen}) => (
+    <motion.ul className={ isOpen ? classes.unOrderedList + " " + classes.unOrderedList_open : classes.unOrderedList } variants={variants} >
         {itemsID.map(i => (
-            <MenuItem i={i} key={i} />
+            <MenuItem isOpen={isOpen} i={i} key={i} />
         ))}
     </motion.ul>
 )
