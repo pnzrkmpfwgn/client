@@ -10,7 +10,7 @@ const Path = (props) => (
   />
 );
 
-const MenuToggle = ({ toggle,isOpen }) => (
+const MenuToggle = ({ toggle }) => (
   <button className={classes.button + " " +classes.button_open} onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path

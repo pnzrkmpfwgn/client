@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import classes from './menu.module.css';
+import Link from 'next/link'
 const variants = {
     open: {
         y: 0,
@@ -19,13 +20,13 @@ const variants = {
 
 const colors = ['#FF008C', '#D309E1', '#9C1AFF', '#7700FF', "#4400FF"];
 
-const MenuItem = ({ i,isOpen }) => {
+const MenuItem = ({ title,slug,i,isOpen,icon,toggleOpen }) => {
     const style = { border: `2px solid ${colors[i]}` };
 
     return (
         <motion.li className={isOpen ? classes.list_item + " " + classes.list_item_open : classes.list_item} variants={variants} whileHover={{scale:1.1}} whileTap={{scale:0.95}} >
-            <div className={classes.icon } style={style} />
-            <div className={classes.text} style={style} />
+            <div className={classes.icon} onClick={()=> toggleOpen()} > <i className={icon} ></i> </div>
+            <div className={classes.text} onClick={()=> toggleOpen()} > <Link href={slug}><a>{title}</a></Link> </div>
         </motion.li>
     )
 }

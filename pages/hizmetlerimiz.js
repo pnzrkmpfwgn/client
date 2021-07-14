@@ -4,6 +4,7 @@ import { ContentPlaceholder } from "../components/accordion/ContentPlaceholder";
 import { ServiceData } from "../data/ServiceData";
 import { Fragment } from "react/cjs/react.production.min";
 import styles from "../styles/hizmetlerimiz.module.css";
+import Link from 'next/link'
 
 const Accordion = ({ i, title, expanded, setExpanded, index }) => {
   const isOpen = i === expanded;
@@ -86,6 +87,14 @@ export default function Services() {
         />
         </Fragment>
         ))}
+      </div>
+      <div className={styles.button_container}>
+        <span className={styles.link_button}>
+          {" "}
+          <Link href="/referanslarimiz">
+            <a></a>
+          </Link>{" "}
+        </span>
       </div>
     </>
   );

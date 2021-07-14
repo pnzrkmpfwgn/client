@@ -54,7 +54,7 @@ export default function Anasayfa() {
   return (
     <>
       <motion.div className={styles.heading}>
-        <h1> Karbel Çelik'e Hoşgeldiniz...</h1>
+        <h1> Karbel Çelik&apos;e Hoşgeldiniz...</h1>
       </motion.div>
       <div className={styles.container}>
         <AnimatePresence initial={false} custom={direction}>

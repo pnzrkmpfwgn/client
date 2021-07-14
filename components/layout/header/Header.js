@@ -41,7 +41,7 @@ export default function Header({ visible }) {
     <header ref={node} title="Başlık" id="başlık">
       {width ? (
         <div >
-          <Menu /> <div className={classes.logo} ><Image src={"/images/Logo.png"} width={400} height={200} /> </div>{" "}
+          <Menu /> <div className={classes.logo} ><Image src={"/images/Logo.png"} width={400} height={200} alt="Logo" /> </div>{" "}
         </div>
       ) : (
         <Nav visible={visible} />

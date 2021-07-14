@@ -39,7 +39,7 @@ const Menu = () => {
       ref={containerRef}
     >
       <motion.div className={isOpen ? classes.background + " " + classes.background_open : classes.background } variants={sidebar} />
-      <Navigation isOpen={isOpen} />
+      <Navigation isOpen={isOpen} toggleOpen={toggleOpen} />
       <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
     </motion.nav>
   );

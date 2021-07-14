@@ -39,7 +39,6 @@
     color: white;
     cursor: pointer;
     height: 70px;
-    min-height: 150px;
     margin-bottom: 20px;
   }
   
@@ -95,8 +94,11 @@
   text-align: center;
   font-size:24px;
   font-weight: bold;
+  cursor: pointer;
 }
-
+.service_title:hover{
+  color:rgb(189, 189, 189);
+}
 .container{
   width: 100vw;
   height: 40vh;
@@ -157,5 +159,67 @@
   
     .paragraph {
       margin-bottom: 20px;
+    }
+  }
+
+  .button_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .link_button{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 30px 15px;
+    perspective: 1000px;
+  }
+  .link_button a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  .link_button a:before,
+  .link_button a:after{
+    position: absolute;
+    content: "Referanslarımız";
+    font-weight: bold;
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .link_button a:before{
+    color: #fff;
+    background: rgb(15, 71, 162);
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .link_button a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .link_button a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+  @media (max-width:768px) {
+    .accordion_container{
+      height:100px;
+    }
+  }
+
+  @media (max-width:425px){
+    .accordion_container{
+      height: 140px;
     }
   }

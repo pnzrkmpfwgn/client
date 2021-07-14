@@ -150,6 +150,7 @@
     height: 55px;
     margin: 30px 15px;
     perspective: 1000px;
+    font-weight: bold;
   }
   .link_button a{
     font-size: 19px;
