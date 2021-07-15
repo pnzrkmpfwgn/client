@@ -2,6 +2,7 @@ import classes from "./nav.module.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 export default function Nav({ visible }) {
   const [logoStyle, setLogoStyle] = useState({});
@@ -32,7 +33,7 @@ export default function Nav({ visible }) {
   }, [visible]);
 
   return (
-    <nav id="navigasyon" title="Navigasyon" style={style} className={classes.Nav}>
+    <motion.nav initial={{opacity:0,y:-200}} animate={{opacity:1,y:0}} transition={{duration:0.3,ease:"easeInOut"}} id="navigasyon" title="Navigasyon" style={style} className={classes.Nav}>
       <Link href="/anasayfa">
         <a style={logoStyle}>
           <Image
@@ -119,6 +120,6 @@ export default function Nav({ visible }) {
           <i className={"fab fa-linkedin fa-lg " + classes.icon}></i>{" "}
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
