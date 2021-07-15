@@ -32,7 +32,7 @@ export default function Nav({ visible }) {
   }, [visible]);
 
   return (
-    <nav style={style} className={classes.Nav}>
+    <nav id="navigasyon" title="Navigasyon" style={style} className={classes.Nav}>
       <Link href="/anasayfa">
         <a style={logoStyle}>
           <Image

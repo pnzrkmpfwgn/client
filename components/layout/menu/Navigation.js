@@ -30,6 +30,8 @@ const itemsID = [
 
 const Navigation = ({ isOpen, toggleOpen }) => (
   <motion.ul
+    id="navigasyon"
+    title="Navigasyon"
     className={
       isOpen
         ? classes.unOrderedList + " " + classes.unOrderedList_open
