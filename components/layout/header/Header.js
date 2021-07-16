@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 //utils
 import { useOnClickOutside, useMediaQuery } from "../../../utils/hooks";
 
@@ -41,7 +42,7 @@ export default function Header({ visible }) {
     <header ref={node} title="Başlık" id="başlık">
       {width ? (
         <div >
-          <Menu /> <div className={classes.logo} ><Image src={"/images/Logo.png"} width={400} height={200} alt="Logo" /> </div>{" "}
+          <Menu /> <div className={classes.logo} ><motion.div initial={{opacity:0,x:200}} animate={{opacity:1,x:0}} transition={{duration:0.3}} ><Image src={"/images/Logo.png"} width={400} height={200} alt="Logo" /> </motion.div></div>{" "}
         </div>
       ) : (
         <Nav visible={visible} />
