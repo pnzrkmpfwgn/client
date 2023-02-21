@@ -73,18 +73,6 @@ export default function Nav({ visible }) {
           </Link>
         </li>
         <li>
-          <Link href="referanslarimiz">
-            <a
-              className={classes.link}
-              title="Referanslarımız Linki"
-              id="referanslarımız_linki_nav"
-              href="#Referanslarımız"
-            >
-              Referanslarımız ve Tedarikçilerimiz
-            </a>
-          </Link>
-        </li>
-        <li>
           <Link href="/iletisim">
             <a
               href="#İletişim"

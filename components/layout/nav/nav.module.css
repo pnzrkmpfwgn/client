@@ -8,13 +8,7 @@
     width: 100vw;
     height: 240px;
     padding: 10px 5px;
-    background: rgb(108, 106, 145);
-    background: linear-gradient(
-      0deg,
-      rgba(108, 106, 145, 1) 0%,
-      rgba(206, 206, 218, 1) 55%,
-      rgba(101, 115, 117, 1) 100%
-    );
+    background: rgb(68, 68, 68);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6c6a91",endColorstr="#657375",GradientType=1);
     z-index: 99;
   }
@@ -43,7 +37,7 @@
     padding: 10px 20px;
     margin:20px 0;
     text-decoration: none;
-    color:rgb(30, 34, 83);
+    color:rgb(83, 30, 30);
     font-weight: bold;
     transition: 0.5s;
     font-size:24px;
@@ -59,8 +53,8 @@
     left:0;
     width:100%;
     height:100%;
-    border-top:1px solid rgb(30, 34, 83);
-    border-bottom:1px solid rgb(30, 34, 83);
+    border-top:1px solid rgb(83, 30, 57);
+    border-bottom:1px solid rgb(83, 30, 69);
     transform: scaleY(2);
     opacity: 0;
     transition: 0.5s;
@@ -79,7 +73,7 @@
     left:0;
     width:100%;
     height:100%;
-    background: rgb(30, 34, 83);;
+    background: rgb(83, 30, 31);;
     transform: scaleY(0);
     transition: 0.5s;
     z-index: -1;

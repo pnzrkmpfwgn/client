@@ -71,7 +71,7 @@ export default function Services() {
         </h3>
         <div className={styles.icon_container}>
           {" "}
-          <i className={"fas fa-wrench fa-3x " + styles.icon}></i>{" "}
+          <i className={"fa fa-car fa-3x " + styles.icon}></i>{" "}
         </div>
         <hr />
         <p id="genel_hizmetler" title="Genel Hizmetler" className={styles.info}>

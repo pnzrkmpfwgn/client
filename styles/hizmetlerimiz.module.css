@@ -62,7 +62,7 @@
   }
 
   .heading {
-    color: rgb(30, 34, 83);
+    color:  rgb(83, 30, 30);
     font-size: 38px;
     font-style: italic;
     text-align: center;
@@ -80,11 +80,11 @@
     color: white;
     padding: 10px;
     border-radius: 50%;
-    background-color: rgb(30, 34, 83);
+    background-color:  rgb(83, 30, 30);
   }
 
   .info {
-    color: rgb(66, 75, 80);
+    color: rgb(159, 12, 12);
     width: 80%;
     margin-left: 10px;
     font-size: 20px;

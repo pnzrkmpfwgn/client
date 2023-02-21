@@ -15,15 +15,9 @@ const itemsID = [
   { title: "Anasayfa", icon: "fas fa-home", slug: "/anasayfa", id: 0 },
   {
     title: "Hizmetlerimiz",
-    icon: "fas fa-wrench",
+    icon: "fa fa-car",
     slug: "/hizmetlerimiz",
     id: 1,
-  },
-  {
-    title: "Referanslarımız ve Tedarikçilerimiz",
-    icon: "far fa-handshake",
-    slug: "/referanslarimiz",
-    id: 2,
   },
   { title: "İletişim", icon: "fas fa-phone", slug: "/iletisim", id: 3 },
 ];

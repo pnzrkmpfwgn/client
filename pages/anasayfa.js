@@ -58,7 +58,7 @@ export default function Anasayfa() {
         <title>Anasayfa</title>
       </Head>
       <motion.div className={styles.heading}>
-        <h1 id="baslik" title="Başlık" > Karbel Çelik&apos;e Hoşgeldiniz...</h1>
+        <h1 id="baslik" title="Başlık" > Kıbrıs Gecelerine Hoşgeldiniz...</h1>
       </motion.div>
       <div className={styles.container}>
         <AnimatePresence initial={false} custom={direction}>
@@ -101,113 +101,23 @@ export default function Anasayfa() {
       <div ref={ref} className={styles.about_container}>
         <h2 title="Karbel Çelik Hakkında" id="karbel_çelik_hakkında">
           {" "}
-          Karbel Çelik Hakkında
+          Kıbrıs&apos;ta Gece Hayatı Hakkında
         </h2>
         <p title="Hakkında Paragrafı" id="hakkinda_paragrafi" >
           {" "}
-          İzmir merkezli Karbel Çelik, çelik konstrüksiyon projelerinde büyük
-          bir deneyime sahip olan firmamız kurulduğu yıldan bu yana, kısa sürede
-          dünyanın prestijli markaları birlikte çalışarak bir çok projeye
-          başarıyla imza atmış ve alanında lider konuma gelmiştir. Firmamız
-          alanındaki diğer kollar olan makina imalatı, taşeronluk hizmetleri ve
-          bakım, onarım inşaat alanlarında da kaliteli hizmet sunmaktadır.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores placeat voluptas mollitia totam facilis quaerat minus molestiae officiis eligendi ipsam consectetur fuga, qui numquam ullam quod accusamus, incidunt quos dicta.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempora doloribus quas sapiente doloremque, ullam earum incidunt sit beatae nihil mollitia, dolores necessitatibus culpa fugiat consequatur magnam aut omnis veritatis.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam modi nobis dolores autem? Officiis dolore tempora sunt quam cumque alias ut rerum incidunt fugit. Quo officiis voluptatum sapiente ex? Facere!
         </p>
         <p>
-          {" "}
-          Alanında bulunduğu projeler arasında firmamız: otel inşaatları, sanayi
-          tesisleri, köprüler, gökdelenler, fabrikalar gibi değişik mekanların
-          çelik konstrüksiyon hizmetlerini, taşeronluk hizmetlerini,
-          bakım-onarım inşaat hizmetleri ve bunun yanında makina imalatlarını
-          kusursuz ve güvenilir ekip personeli ile birlikte yapmaktadır.
-          Firmamız geçmişte olduğu gibi gelecekte de güvenilir ve kaliteli bir
-          hizmet vermekten mutluluk duymaktadır.{" "}
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum aut accusamus maiores sequi. Illum optio temporibus sapiente quaerat, nesciunt vitae assumenda impedit aperiam dolorem laboriosam adipisci corporis voluptates voluptatibus autem!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum fuga delectus quam magni cum nulla dolor necessitatibus reprehenderit repudiandae! Recusandae ducimus facilis tempore, deserunt neque obcaecati sint sit eveniet soluta!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis et perferendis quae provident tenetur rem! Nostrum nam sunt, corrupti, aspernatur magnam esse ut enim, laboriosam laborum rerum exercitationem asperiores accusamus.
         </p>
+        
       </div>
-      <div ref={ref} className={styles.why_us}>
-        <h3 title="Neden Karbel?" id="neden_karbel?" className={styles.heading}>
-          {" "}
-          Neden Karbel ?{" "}
-        </h3>
-
-        <hr />
-        <div className={styles.grid_container}>
-          <div className={styles.grid_item}>
-            <div className={styles.icon}>
-              <i className={"fas fa-hourglass fa-3x"}></i>
-            </div>
-            <h3
-              title="Verimlilik ve Zaman Yönetimi"
-              id="verimlilik_ve_zaman_yönetimi"
-            >
-              Verimlilik ve Zaman Yönetimi
-            </h3>
-            <p>
-              {" "}
-              Kalite, hizmet, verimlilik ve zaman yönetiminin sürekli
-              iyileştirilmesi yoluyla müşteri beklentilerini aşma.
-            </p>
-          </div>
-
-          <div className={styles.grid_item}>
-            <div className={styles.icon}>
-              {" "}
-              <i className={"fas fa-chart-bar fa-3x"}></i>{" "}
-            </div>
-            <h3 title="Sektörümüzde Liderlik" id="sektörümüzde_liderlik">
-              Sektörümüzde Liderlik
-            </h3>
-            <p>Sektörümüzde liderlik ve başarma azmi. </p>
-          </div>
-
-          <div className={styles.grid_item}>
-            <div className={styles.icon}>
-              {" "}
-              <i className={"fas fa-users fa-3x"}></i>{" "}
-            </div>
-            <h3 title="Nitelikli İnsan Kaynağı" id="nitelikli_insan_kaynağı">
-              Nitelikli İnsan Kaynağı
-            </h3>
-            <p>Uzmanlaşmış ve nitelikli insan kaynağı.</p>
-          </div>
-
-          <div className={styles.grid_item}>
-            <div className={styles.icon}>
-              {" "}
-              <i className={"fas fa-laptop fa-3x"}></i>{" "}
-            </div>
-            <h3
-              title="Yeni Teknolojilerin Takibi"
-              id="yeni_teknolojilerin_takibi"
-            >
-              {" "}
-              Yeni Teknolojilerin Takibi
-            </h3>
-            <p>Bilgi paylaşımı ve sektörümüzdeki yeni teknolojilerin takibi.</p>
-          </div>
-
-          <div className={styles.grid_item}>
-            <div className={styles.icon}>
-              {" "}
-              <i className={"fas fa-chess-rook fa-3x"}></i>{" "}
-            </div>
-            <h3 title="Güvenirlik" id="güvenirlik">
-              Güvenilirlik
-            </h3>
-            <p> Güvenirlik, şeffaflık ve açıklık. </p>
-          </div>
-
-          <div className={styles.grid_item}>
-            <div className={styles.icon}>
-              {" "}
-              <i className={"fas fa-leaf fa-3x"}></i>{" "}
-            </div>
-            <h3 title="Çevreye Saygı" id="çevreye_saygı">
-              Çevreye Saygı
-            </h3>
-            <p>Çevremize saygıdan kaçınmıyoruz.</p>
-          </div>
-        </div>
-      </div>
+      
       <div className={styles.button_container}>
         <span className={styles.link_button}>
           {" "}
